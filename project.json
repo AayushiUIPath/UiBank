@@ -1,0 +1,81 @@
+{
+  "name": "UiPathBankTestProject",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.20.2]",
+    "UiPath.System.Activities": "[23.4.3]",
+    "UiPath.Testing.Activities": "[23.4.1]",
+    "UiPath.UIAutomation.Activities": "[22.10.8]"
+  },
+  "webServices": [
+    {
+      "namespace": "uibankapi",
+      "serviceDocument": "Services\\uibankapi.json",
+      "webDocumentUri": "https://uibank-api.uipath.com/explorer/swagger.json",
+      "uniqueReference": "xnSgS891Zf9n8YYWpfd/YYk7JSIIGL3EceiiKnOHPOs="
+    }
+  ],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.4.0",
+  "projectVersion": "1.0.165746829",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "81ddb35f-958e-4ce2-98ad-7489a4818f8a",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "cb0fd57c-9d11-45ce-b83c-9a46c5fe9a9d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "ApplyLoanTestCase - Copy (1).xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "67c8a737-705b-49a0-9ef8-d4597675eb4a",
+        "dataVariationFilePath": ".variations\\UiBank.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCase\\TC_001_ApplyLoanTestCase.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

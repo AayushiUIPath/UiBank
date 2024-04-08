@@ -1,0 +1,236 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ApplyLoanTestCase" this:ApplyLoanTestCase.uiBank="[System.Text.Json.JsonSerializer.Deserialize(Of IDictionary( Of System.String,System.Object))(&quot;{&quot;&quot;LoanEmail&quot;&quot;:&quot;&quot;&quot;&quot;,&quot;&quot;LoanAmount&quot;&quot;:120000,&quot;&quot;LoanTerm&quot;&quot;:5,&quot;&quot;LoanIncome&quot;&quot;:30000,&quot;&quot;LoanAge&quot;&quot;:35,&quot;&quot;LoanGranted&quot;&quot;:&quot;&quot;No&quot;&quot;,&quot;&quot;LoanRate&quot;&quot;:0,&quot;&quot;Message&quot;&quot;:&quot;&quot;Sorry, at this time you have not been approved for a loan.&quot;&quot;}&quot;)]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="uiBank" Type="InArgument(scg:IDictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>804,1247.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ApplyLoanTestCase_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Json</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ApplyLoanTestCase" sap:VirtualizedContainerService.HintSize="620.666666666667,1182.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="558.666666666667,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="BusinessComponents\Login.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_username">
+            <Literal x:TypeArguments="x:String">aayushi.chauhan1</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_password">
+            <Literal x:TypeArguments="x:String">uibankpassword</Literal>
+          </InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="558.666666666667,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Apply Loan.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="BusinessComponents\Apply Loan.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LoanEmail">[uiBank("LoanEmail").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LoanTerm">[uiBank("LoanTerm").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LoanIncome">[uiBank("LoanIncome").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LoanAge">[uiBank("LoanAge").ToString]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LoanAmount">[uiBank("LoanAmount").ToString]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="558.666666666667,540" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[uiBank(&quot;LoanGranted&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.666666666667,274" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+        <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" x:Key="No" ContinueOnFailure="True" sap:VirtualizedContainerService.HintSize="534,217.333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_4" Operator="Equality" OutputArgument="Value" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+          <uta:VerifyControlAttribute.ActivityToTest>
+            <ActivityAction>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'H1'" sap:VirtualizedContainerService.HintSize="334,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="090dfcd5-edcc-4998-bcbc-16007004c047" InformativeScreenshot="893c5e2187f1ee20625617d4e584a306" Selector="&lt;html app='chrome.exe' title='UiBank' /&gt;&lt;webctrl tag='H1' aaname='Sorry, at this time you have not been approved for a loan.' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:Object">
+                    <VariableReference x:TypeArguments="x:Object">
+                      <VariableReference.Variable>
+                        <Variable x:TypeArguments="x:Object" x:Name="__ReferenceID0" Name="_autogenerated_Value" />
+                      </VariableReference.Variable>
+                    </VariableReference>
+                  </OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+            </ActivityAction>
+          </uta:VerifyControlAttribute.ActivityToTest>
+          <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+            <ActivityFunc x:TypeArguments="x:Object">
+              <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_6">
+                <uta:ArgumentsBridge.Input>
+                  <InArgument x:TypeArguments="x:Object">
+                    <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+                  </InArgument>
+                </uta:ArgumentsBridge.Input>
+              </uta:ArgumentsBridge>
+            </ActivityFunc>
+          </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+          <uta:VerifyControlAttribute.Expression>
+            <InArgument x:TypeArguments="x:String">[uiBank("Message").ToString]</InArgument>
+          </uta:VerifyControlAttribute.Expression>
+        </uta:VerifyControlAttribute>
+        <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" x:Key="Yes" ContinueOnFailure="True" sap:VirtualizedContainerService.HintSize="534,217.333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_5" Operator="Equality" OutputArgument="Value" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+          <uta:VerifyControlAttribute.ActivityToTest>
+            <ActivityAction>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN  rateValue'" sap:VirtualizedContainerService.HintSize="334,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50405b54-87ad-4bf1-805a-43bd90393abf" InformativeScreenshot="50f22fd9868f42fe3a4372b41f4a4f93" Selector="&lt;html app='chrome.exe' title='UiBank' /&gt;&lt;webctrl id='rateValue' tag='SPAN' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:Object">
+                    <VariableReference x:TypeArguments="x:Object">
+                      <VariableReference.Variable>
+                        <Variable x:TypeArguments="x:Object" x:Name="__ReferenceID1" Name="_autogenerated_Value" />
+                      </VariableReference.Variable>
+                    </VariableReference>
+                  </OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+            </ActivityAction>
+          </uta:VerifyControlAttribute.ActivityToTest>
+          <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+            <ActivityFunc x:TypeArguments="x:Object">
+              <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_7">
+                <uta:ArgumentsBridge.Input>
+                  <InArgument x:TypeArguments="x:Object">
+                    <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID1}" />
+                  </InArgument>
+                </uta:ArgumentsBridge.Input>
+              </uta:ArgumentsBridge>
+            </ActivityFunc>
+          </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+          <uta:VerifyControlAttribute.Expression>
+            <InArgument x:TypeArguments="x:String">[uiBank("LoanRate").ToString]</InArgument>
+          </uta:VerifyControlAttribute.Expression>
+        </uta:VerifyControlAttribute>
+      </Switch>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logout.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496.666666666667,115.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="BusinessComponents\Logout.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+  </Sequence>
+</Activity>

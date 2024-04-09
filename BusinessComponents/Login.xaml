@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1572,1381.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1248,2714.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,29 +83,28 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1112,1316.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1258,2650" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="1050,1206" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="1196,2539.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,986.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1162,2320.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  username'" sap:VirtualizedContainerService.HintSize="954,157.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_username]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  username'" sap:VirtualizedContainerService.HintSize="1100,156.666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[in_username]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d908a3c5-7eb7-404e-a80b-60adad596be5" InformativeScreenshot="091c0c1c7c79e6bfd1a5f4d823bc3925" Selector="&lt;webctrl id='username' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -117,7 +116,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  password'" sap:VirtualizedContainerService.HintSize="954,157.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_password]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  password'" sap:VirtualizedContainerService.HintSize="1100,156.666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[in_password]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e708619b-46a2-42f9-964c-830d9e593a90" InformativeScreenshot="bf39c86f9fabce533ac619a6c1416159" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -129,7 +128,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="954,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="1100,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -151,28 +150,28 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <uix:NCheckState DisplayName="Check App State 'login failed'" sap:VirtualizedContainerService.HintSize="1100,1667.33333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'login failed'" sap:VirtualizedContainerService.HintSize="1100,1664" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,141.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,141.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[new BusinessRuleException(&quot;Wrong login credentials&quot;)]" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw Exception="[new BusinessRuleException(&quot;Wrong login credentials&quot;)]" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="Throw_2" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="596,1446" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="596,1444" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,269.333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,268.666666666667" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_4" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                     <uta:VerifyControlAttribute.ActivityToTest>
                       <ActivityAction>
-                        <uix:NGetText DisplayName="Get Text 'Welcome!'" sap:VirtualizedContainerService.HintSize="334,159.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
+                        <uix:NGetText DisplayName="Get Text 'Welcome!'" sap:VirtualizedContainerService.HintSize="334,158.666666666667" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
                           <uix:NGetText.OutUiElement>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <VariableReference x:TypeArguments="ui:UiElement">
@@ -214,7 +213,7 @@
                     </uta:VerifyControlAttribute.ActivityToTest>
                     <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
                       <ActivityFunc x:TypeArguments="x:Object">
-                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_4">
                           <uta:ArgumentsBridge.Input>
                             <InArgument x:TypeArguments="x:Object">
                               <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
@@ -227,7 +226,7 @@
                       <InArgument x:TypeArguments="x:String">["Welcome"]</InArgument>
                     </uta:VerifyControlAttribute.Expression>
                   </uta:VerifyControlAttribute>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  navbarDropdown'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  navbarDropdown'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -249,7 +248,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /loans'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /loans'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -271,10 +270,10 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,269.333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,268.666666666667" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_5" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                     <uta:VerifyControlAttribute.ActivityToTest>
                       <ActivityAction>
-                        <uix:NGetText DisplayName="Get Text 'Financing for'" sap:VirtualizedContainerService.HintSize="334,159.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
+                        <uix:NGetText DisplayName="Get Text 'Financing for'" sap:VirtualizedContainerService.HintSize="334,158.666666666667" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
                           <uix:NGetText.OutUiElement>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <VariableReference x:TypeArguments="ui:UiElement">
@@ -316,7 +315,7 @@
                     </uta:VerifyControlAttribute.ActivityToTest>
                     <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
                       <ActivityFunc x:TypeArguments="x:Object">
-                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_2">
+                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_5">
                           <uta:ArgumentsBridge.Input>
                             <InArgument x:TypeArguments="x:Object">
                               <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID1}" />
@@ -329,7 +328,7 @@
                       <InArgument x:TypeArguments="x:String">["loan"]</InArgument>
                     </uta:VerifyControlAttribute.Expression>
                   </uta:VerifyControlAttribute>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  applyButton'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  applyButton'" sap:VirtualizedContainerService.HintSize="534,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -351,10 +350,10 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,269.333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_3" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                  <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,268.666666666667" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_6" Operator="RegexMatch" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                     <uta:VerifyControlAttribute.ActivityToTest>
                       <ActivityAction>
-                        <uix:NGetText DisplayName="Get Text 'Loan Application'" sap:VirtualizedContainerService.HintSize="334,159.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
+                        <uix:NGetText DisplayName="Get Text 'Loan Application'" sap:VirtualizedContainerService.HintSize="334,158.666666666667" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="8cf75356-35cc-40b2-99dd-e4ac0bd8f394" Version="V3">
                           <uix:NGetText.OutUiElement>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <VariableReference x:TypeArguments="ui:UiElement">
@@ -390,7 +389,7 @@
                     </uta:VerifyControlAttribute.ActivityToTest>
                     <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
                       <ActivityFunc x:TypeArguments="x:Object">
-                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_3">
+                        <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_6">
                           <uta:ArgumentsBridge.Input>
                             <InArgument x:TypeArguments="x:Object">
                               <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID2}" />

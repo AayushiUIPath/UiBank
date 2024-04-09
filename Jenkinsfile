@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
 	    agent any
 	
 
@@ -7,7 +7,7 @@
 	        MAJOR = '1'
 	        MINOR = '1'
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://cloud.uipath.com/uipatgeeiadh/DefaultTenant/orchestrator_"
+	        UIPATH_ORCH_URL = "https://cloud.uipath.com"
 	        UIPATH_ORCH_LOGICAL_NAME = "uipatgeeiadh"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "Shared"
@@ -27,6 +27,7 @@
 	                echo "GitHub BranchName ${env.BRANCH_NAME}"
 	                checkout scm
 	
+
 	            }
 	        }
 	
@@ -56,8 +57,9 @@
 	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 	                environments: 'INT',
+			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
@@ -73,7 +75,7 @@
 	            steps {
 	                echo 'Testing the workflow...'
 					UiPathTest (
-					  testTarget: [$class: 'TestSetEntry', testSet: "UiBank_Tests"],
+					  testTarget: [$class: 'TestSetEntry', testSet: "AnnounceFavouriteSinger_Tests"],
 					  orchestratorAddress: "${UIPATH_ORCH_URL}",
 					  orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 					  folderName: "${UIPATH_ORCH_FOLDER_NAME}",
@@ -81,7 +83,7 @@
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
 					  parametersFilePath: ''
 					)
 	            }
@@ -121,8 +123,9 @@
 	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 	                environments: 'INT',
+			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 					)
@@ -151,7 +154,7 @@
 	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
 	        }
 	        always {
-	            /* Clean workspace if success */
+	            /* Clean workspace if success*/
 	            cleanWs()
 	        }
 	    }

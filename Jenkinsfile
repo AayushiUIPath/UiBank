@@ -83,7 +83,8 @@ pipeline {
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey')
+					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
+					  parametersFilePath: 'None'
 					)
 	            }
 			}

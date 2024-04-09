@@ -61,7 +61,7 @@ pipeline {
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
 					traceLevel: 'None',
-					entryPointPaths: 'BusinessComponents\Apply Loan.xaml'
+					entryPointPaths: 'Apply Loan.xaml'
 	
 
 					)
@@ -127,7 +127,7 @@ pipeline {
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
 					traceLevel: 'None',
-					entryPointPaths: 'BusinessComponents\Apply Loan.xaml'
+					entryPointPaths: 'Apply Loan.xaml'
 					)
 				}   
 			}	

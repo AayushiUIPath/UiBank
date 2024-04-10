@@ -83,12 +83,7 @@ pipeline {
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UserKey'),
-					  parametersFilePath: '',
-					  projectUrl: '', 
-					  repositoryBranch: '',
-					  repositoryCommit: '', 
-					  repositoryType: '',
- 					  repositoryUrl: '',
+					  parametersFilePath: ''
 					)
 	            }
 			}

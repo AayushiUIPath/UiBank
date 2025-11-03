@@ -1,6 +1,6 @@
 {
   "name": "UiPathBankTestProject",
-  "description": "Test Automation Project",
+  "description": "Test Automation Project Deevelop",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.20.2]",
@@ -78,4 +78,5 @@
   "templateProjectData": {},
   "publishData": {},
   "targetFramework": "Legacy"
+
 }
